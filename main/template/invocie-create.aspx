@@ -802,13 +802,16 @@
                                                 <tbody>
                                                     <tr>
                                                         <td><input type="checkbox"  /></td>
-                                                        <td name="itemName" class="muted-text">item 1</td>
+                                                        
+
+                                                        
+                                                        <td name="itemName" class="muted-text">item 1<input type="hidden" name="itemName1" value="item1"></td>
                                                        
                                                         <td class="muted-text">
                                                             <input  style="text-align:center;" name="qun1" value="1" type="text">
                                                         </td>
                                                         <td class="muted-text"><input  style="text-align:center;" name="unitp1" value="1" type="text"></td>
-                                                        <td class="text-primary"><span name="rowP1">0.00</span></td>
+                                                        <td class="text-primary"><span name="rowP1">0.00<input type="hidden" name="totalRowPrice" value="0.00"></span></td>
                                                     </tr>
                                                     <tr>
                                                         <td><input type="checkbox" /></td>

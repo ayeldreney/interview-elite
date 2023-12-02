@@ -33,7 +33,7 @@
           <Property Name="Unit_price" Type="Int32" />
           <Property Name="Total" Type="Int32" />
         </EntityType>
-        <EntityContainer Name="interviewDBEntities2" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="interviewDBEntities3" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Items" EntityType="Self.Item" />
         </EntityContainer>
       </Schema>
@@ -41,7 +41,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="interviewDBModelStoreContainer" CdmEntityContainer="interviewDBEntities2">
+        <EntityContainerMapping StorageEntityContainer="interviewDBModelStoreContainer" CdmEntityContainer="interviewDBEntities3">
           <EntitySetMapping Name="Items">
             <EntityTypeMapping TypeName="interviewDBModel.Item">
               <MappingFragment StoreEntitySet="Items">
