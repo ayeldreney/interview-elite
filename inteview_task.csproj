@@ -43,7 +43,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -3613,6 +3621,16 @@
     <Content Include="assets\plugins\x-editable\dist\bootstrap3-editable\img\clear.png" />
     <Content Include="assets\plugins\x-editable\dist\bootstrap3-editable\img\loading.gif" />
     <Content Include="assets\plugins\x-editable\dist\bootstrap3-editable\js\bootstrap-editable.min.js" />
+    <Content Include="DAL\Data\ItemModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ItemModel.edmx</DependentUpon>
+      <LastGenOutput>ItemModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="DAL\Data\ItemModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ItemModel.edmx</DependentUpon>
+      <LastGenOutput>ItemModel.cs</LastGenOutput>
+    </Content>
     <Content Include="main\css\style.css" />
     <Content Include="main\css\style_ar.css" />
     <Content Include="main\icons\cryptocoins\css\cryptocoins-colors.css" />
@@ -4009,7 +4027,24 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DAL\Data\ApplicationDataAcsess.cs" />
+    <Compile Include="DAL\Data\Item.cs">
+      <DependentUpon>ItemModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Data\ItemModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ItemModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Data\ItemModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ItemModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Data\ItemModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ItemModel.edmx</DependentUpon>
+    </Compile>
     <Compile Include="DAL\models\item.cs" />
     <Compile Include="main\template\invocie-create.aspx.cs">
       <DependentUpon>invocie-create.aspx</DependentUpon>
@@ -4017,6 +4052,9 @@
     </Compile>
     <Compile Include="main\template\invocie-create.aspx.designer.cs">
       <DependentUpon>invocie-create.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="main\template\invoice-create.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -4496,6 +4534,13 @@
     <Content Include="main\scss\responsive\responsive-page-signin.scss" />
     <Content Include="main\scss\responsive\responsive-profile.scss" />
     <Content Include="main\scss\responsive\responsive.scss" />
+    <EntityDeploy Include="DAL\Data\ItemModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ItemModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="DAL\Data\ItemModel.edmx.diagram">
+      <DependentUpon>ItemModel.edmx</DependentUpon>
+    </Content>
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -4503,6 +4548,9 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

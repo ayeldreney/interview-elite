@@ -13,6 +13,6 @@ namespace inteview_task.DAL.models
 		public int Quntity { get; set; }
 		public int Unit_price { get; set; }
 
-		public int Totat { get; set; }
+		public int Total { get; set; }
 	}
 }

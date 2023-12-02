@@ -57,3 +57,7 @@ C:\Users\Eldreney\source\repos\inteview_task\inteview_task\obj\Debug\inteview_ta
 C:\Users\Eldreney\source\repos\inteview_task\inteview_task\obj\Debug\inteview_task.csproj.CopyComplete
 C:\Users\Eldreney\source\repos\inteview_task\inteview_task\obj\Debug\inteview_task.dll
 C:\Users\Eldreney\source\repos\inteview_task\inteview_task\obj\Debug\inteview_task.pdb
+C:\Users\Eldreney\source\repos\inteview_task\inteview_task\bin\EntityFramework.dll
+C:\Users\Eldreney\source\repos\inteview_task\inteview_task\bin\EntityFramework.SqlServer.dll
+C:\Users\Eldreney\source\repos\inteview_task\inteview_task\bin\EntityFramework.xml
+C:\Users\Eldreney\source\repos\inteview_task\inteview_task\bin\EntityFramework.SqlServer.xml

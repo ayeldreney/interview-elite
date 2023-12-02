@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="invoice-create.aspx.cs" Inherits="inteview_task.main.template.invoice_create"  %>
+
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -762,6 +764,9 @@
                         </ol>
                     </div>
                 </div>
+   
+                 <form id="form1" runat="server" action="/main/template/invocie-create.aspx" method="post">
+                     <asp:Button PostBackUrl="/main/template/invocie-create.aspx" Text="Validate" runat="server"/>
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="card">
@@ -769,7 +774,7 @@
                                 <div class="row">
                                     <div class="col-lg-12">
                                         
-                                            <button class="btn btn-primary btn-sl-lg mr-3">Save bill in DB</button>
+                                            <button type="submit" class="btn btn-primary btn-sl-lg mr-3">Save bill in DB</button>
                                          
                                             <button class="btn btn-info  " onclick="deleteCheckedRows()">Delete selected rows</button>
                                            
@@ -782,6 +787,7 @@
                                 <div class="row mt-5">
                                     <div class="col-lg-12">
                                         <div class="create-invoice-table table-responsive">
+                                           
                                             <table class="table invoice-details-table" style="min-width: 620px;">
                                                 <thead>
                                                     <tr>
@@ -796,13 +802,13 @@
                                                 <tbody>
                                                     <tr>
                                                         <td><input type="checkbox"  /></td>
-                                                        <td class="muted-text">item 1</td>
+                                                        <td name="itemName" class="muted-text">item 1</td>
                                                        
                                                         <td class="muted-text">
-                                                            <input  style="text-align:center;" value="1" type="text">
+                                                            <input  style="text-align:center;" name="qun1" value="1" type="text">
                                                         </td>
-                                                        <td class="muted-text"><input  style="text-align:center;" value="1" type="text"></td>
-                                                        <td class="text-primary"><span>0.00</span></td>
+                                                        <td class="muted-text"><input  style="text-align:center;" name="unitp1" value="1" type="text"></td>
+                                                        <td class="text-primary"><span name="rowP1">0.00</span></td>
                                                     </tr>
                                                     <tr>
                                                         <td><input type="checkbox" /></td>
@@ -838,6 +844,7 @@
                                                      
                                                 </tbody>
                                             </table>
+                                               
                                         </div>
                                     </div>
                                 </div>
@@ -845,9 +852,12 @@
                         </div>
                     </div>
                 </div>
+                      </form>
             </div>
             <!-- #/ container -->
+    
         </div>
+
         <!--**********************************
             Content body end
         ***********************************-->
